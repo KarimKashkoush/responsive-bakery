@@ -3,18 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bakery</title>
     <!-- Font Awesome Css -->
     <link rel="stylesheet" href="assets/css/all.css">
     <!-- google font -->
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Moon+Dance&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Normalize css file -->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <!-- css file -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+    <!-- Start Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav_logo">bakery</a>
+            <div class="nav_menu" id="navMenu">
+                <ul class="nav_list">
+                    <li class="nav_iteam">
+                        <a href="#home" class="nav_link active">Home</a>
+                    </li>
+                    <li class="nav_iteam">
+                        <a href="#new" class="nav_link">News</a>
+                    </li>
+                    <li class="nav_iteam">
+                        <a href="#about" class="nav_link">About Us</a>
+                    </li>
+                    <li class="nav_iteam">
+                        <a href="#favorite" class="nav_link">Favorites</a>
+                    </li>
+                    <li class="nav_iteam">
+                        <a href="#visit" class="nav_link">Location</a>
+                    </li>
+                </ul>
+                <div class="nav_close" id="closeNav">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <img src="assets/images/bread-4.png" class="nav_img-1">
+                <img src="assets/images/bread-1.png" class="nav_img-2">
+            </div>
+            <div class="nav_open" id="openNav">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+    <!-- Start Main -->
+    <main class="main">
+        <!-- Start Home -->
+        <div class="home section" id="home">
+            <img src="assets/images/home-bg.jpg" class="home_bg">
+            <div class="home_shadow"></div>
+            
+            <div class="home_container container grid">
+                <div class="home_data">
+                    <h1 class="home_title">
+                        Select The Best <br> Quality Breads
+                    </h1>
     
+                    <a href="#" class="button">Select Breads</a>
+    
+                    <img src="assets/images/bread-1.png" class="home_bread">
+                </div>
+    
+                <div class="home_image">
+                    <img src="assets/images/home-bread.png" class="home_img">
+                </div>
+    
+                <footer class="home_footer">
+                    <div class="home_location">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>AV. The Sun #321 <br> Lima Peru</span>
+                    </div>
+                    <div class="home_social">
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- End Home -->
+    </main>
+    <!-- End Main -->
     <!-- Font Awesome Js -->
     <script src="assets/js/all.js"></script>
     <!-- Js file -->
