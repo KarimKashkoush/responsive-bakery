@@ -4,7 +4,7 @@
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
     --first-color: hsl(28, 88%, 62%);
-    --first-color-alt: hsl(28, 84%, 58%);
+    --first-color-alt: hsl(28, 89%, 42%);
     --title-color: hsl(0, 0%, 95%);
     --text-color: hsl(0, 0%, 75%);
     --text-color-light: hsl(0, 0%, 65%);
@@ -68,7 +68,6 @@ button {
 body {
     background-color: var(--body-color);
     color: var(--text-color);
-    height: 30000px;
 }
 
 button {
@@ -116,7 +115,7 @@ ul {
     padding-block: 5rem 1rem;
 }
 
-.section__title {
+.section_title {
     font-size: var(--bigger-font-size);
     font-family: var(--second-font);
     margin-bottom: 1.5rem;
@@ -129,6 +128,11 @@ ul {
 }
 
 /* Button */
+button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
 .button {
     position: relative;
     display: inline-flex;
@@ -138,6 +142,7 @@ ul {
     padding: 1.125rem 2rem;
     transition: color 0.4s;
     overflow: hidden;
+    width: fit-content;
 }
 .button::after {
     content: "";
@@ -213,6 +218,18 @@ ul {
     .nav_close,
     .nav_open {
         display: block;
+    }
+
+    .nav_open span {
+        display: block;
+        height: 3px;
+        width: 25px;
+        background-color: var(--title-color);
+        border-radius: 100px;
+    }
+
+    .nav_open span:not(:last-child) {
+        margin-bottom: 5px;
     }
 
     .nav_menu {
@@ -375,3 +392,283 @@ ul {
     color: var(--first-color);
 }
 /* End Home */
+
+/* Start News */
+.new_container {
+    padding-top: 1.5rem;
+    row-gap: 3.5rem;
+}
+
+.new_content {
+    row-gap: 2rem;
+}
+
+.new_card {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.new_img {
+    width: 150px;
+}
+
+.new_title {
+    font-size: var(--h2-font-size);
+    font-family: var(--second-font);
+    color: var(--first-color);
+    margin-bottom: .5rem;
+}
+
+.new_description {
+    font-size: var(--small-font-size);
+}
+
+.new_card:nth-child(2) img {
+    order: -1;
+}
+
+.new_button {
+    margin: auto;
+}
+/* End News */
+/* Start About */
+.about_container {
+    row-gap: 4rem;
+}
+
+.about_data {
+    position: relative;
+    text-align: center;
+}
+
+.about_description {
+    margin-bottom: 3rem;
+}
+
+.about_bread {
+    width: 60px;
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+}
+
+.about_img {
+    width: 320px;
+    justify-self: center;
+}
+
+/* End About */
+
+/* Start Favoritre */
+.favorite_container {
+    padding-top: 3.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 1.5rem;
+}
+
+.favorite_card {
+    position: relative;
+    background-color: var(--container-color);
+    box-shadow: 0 12px 24px hsla(0, 0%, 0%, .3);
+    padding: 6.5rem 1rem 1.25rem;
+    border: 2px solid transparent;
+    transition: border-color .4s;
+}
+
+.favorite_img {
+    width: 120px;
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.favorite_title {
+    font-size: var(--h2-font-size);
+    font-family: var(--second-font);
+    color: var(--first-color);
+}
+
+.favorite_subtitle {
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.favorite_price {
+    font-size: var(--normal-font-size);
+    font-family: var(--second-font);
+}
+
+.favorite_button {
+    background-color: var(--first-color);
+    padding: 0.25rem;
+    font-size: 1.25rem;
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.favorite_card:hover {
+    border-color: var(--first-color);
+}
+/* End Favoritre */
+
+/* Start Visit */
+.visit_container {
+    position: relative;
+    padding-block: 3rem;
+}
+
+.visit_bg,
+.visit_shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.visit_bg {
+    object-fit: cover;
+    object-position: center;
+}
+
+.visit_shadow {
+    background: linear-gradient(180deg, 
+                hsla(0, 0%, 6%) 0%,
+                hsl(0, 0%, 4%, 0.1) 50%,
+                hsl(0, 0%, 6%) 100%);
+}
+
+.visit_data {
+    text-align: center;
+}
+
+.visit_description {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    margin-bottom: 3rem;
+}
+/* End Visit */
+/* Start Footer */
+.footer {
+    padding-block: 3rem 2rem;
+}
+.footer_container {
+    position: relative;
+    row-gap: 4rem;
+}
+.footer_logo {
+    display: inline-block;
+    color: var(--first-color);
+    font-size: var(--h2-font-size);
+    font-family: var(--second-font);
+    margin-bottom: 0.5rem;
+    transition: color 0.4s;
+}
+
+.footer_logo:hover {
+    color: var(--first-color-alt);
+}
+
+.footer_content {
+    grid-template-columns: repeat(2, max-content);
+    gap: 4rem 2rem;
+}
+
+.footer_title {
+    font-size: var(--h3-font-size);
+    margin-bottom: 1.25rem;
+}
+
+.footer_list {
+    display: grid;
+    row-gap: .75rem;
+}
+
+.footer_info {
+    font-style: normal;
+}
+
+.footer_social {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.footer_social a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.4s;
+}
+.footer_social a:hover {
+    color: var(--first-color);
+}
+
+.footer_img-1,
+.footer_img-2 {
+    position: absolute;
+}
+
+.footer_img-1 {
+    width: 60px;
+    top: 2.5rem;
+    right: 1.5rem;
+}
+
+.footer_img-2 {
+    width: 70px;
+    top: 17rem;
+    right: 9rem;
+}
+
+.footer_copy {
+    display: block;
+    margin-top: 6rem;
+    text-align: center;
+    font-size: var(--small-font-size);
+}
+/* End Footer */
+
+/* Scrool Bar */
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: hsl(28, 12%, 15%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(28, 12%, 25%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(28, 12%, 35%);
+}
+/* Scrool Bar */
+
+/* Start Scroll Up */
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -50rem;
+    background-color: var(--container-color);
+    color: var(--title-color);
+    box-shadow: 0 12px 24px hsla(0, 0%, 0%, .3);
+    display: inline-flex;
+    padding: 6px;
+    font-size: 1.25rem;
+    z-index: var(--z-fixed);
+    transition: bottom .4s, transform .4s;
+    cursor: pointer;
+}
+
+.scrollup:hover {
+    transform: translateY(-0.5rem);
+}
+
+.show_scroll {
+    bottom: 3rem;
+}
+/* End Scroll Up */

@@ -33,3 +33,25 @@ navLink.forEach(e => {e.addEventListener('click',  linkAction)})
 
 // ============================================= //
 
+
+// Scroll Up //
+const scroll = document.getElementById("scrollUp");
+
+const scrollUpOnClick = ()=> {
+    scrollTo(0,0)
+}
+
+scroll.addEventListener('click', scrollUpOnClick)
+
+const scrollUp = ()=> {
+    this.scrollY >= 300 ? scroll.classList.add('show_scroll') : scroll.classList.remove('show_scroll')
+}
+
+window.addEventListener('scroll', scrollUp)
+
+
+// ============================================= //
+
+
+// Write The Date in footer //
+document.getElementById("footerDate").innerHTML = new Date().getFullYear();
