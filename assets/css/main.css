@@ -172,6 +172,7 @@ button {
     background-color: transparent;
     z-index: var(--z-fixed);
 }
+
 .blur_header::after {
     content: "";
     position: absolute;
@@ -672,3 +673,57 @@ button {
     bottom: 3rem;
 }
 /* End Scroll Up */
+
+/* Start Shopping */
+.shopping {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    background-color: hsla(0, 0, 6%, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    min-height: 100vh;
+    transition: right 0.4s;
+}
+.shopping.open {
+    right: 0;
+}
+.shopping_icon {
+    position: absolute;
+    top: 70px;
+    left: -36px;
+    cursor: pointer;
+}
+.shopping_icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.shopping_data {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 1rem;
+}
+
+.shopping_data:not(:last-child) {
+    border-bottom: 1px solid;
+}
+
+.shopping_img img {
+    width: 80px;
+}
+
+.total {
+    position: fixed;
+    bottom: 0;
+    width: 85%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: var(--h2-font-size);
+}
+/* End Shopping */
