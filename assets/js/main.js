@@ -53,13 +53,6 @@ window.addEventListener('scroll', scrollUp)
 // ============================================= //
 
 
-const openShopping = document.getElementById("ShopIcon");
-const shopContainer = document.getElementById("shopping");
-
-
-openShopping.onclick = function() {
-    shopContainer.classList.toggle("open")
-}
-
 // Write The Date in footer //
 document.getElementById("footerDate").innerHTML = new Date().getFullYear();
+// ============================================= //
