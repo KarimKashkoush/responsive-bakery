@@ -56,3 +56,31 @@ window.addEventListener('scroll', scrollUp)
 // Write The Date in footer //
 document.getElementById("footerDate").innerHTML = new Date().getFullYear();
 // ============================================= //
+
+
+// Scroll REVEL ANIMATION
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '40px',
+    opscity:1 ,
+    scale: 1.1,
+    duration: 2500,
+    delay: 300
+})
+
+sr.reveal(`.home_data, .about_img, .about_data, .visit_data`)
+
+sr.reveal(`.home_image, .footer_img-1, .footer_img-2`, {rotate: {z:-15}})
+
+sr.reveal(`.home_bread, .about_bread`, {rotate: {z:15}})
+
+sr.reveal(`.home_footer`, {scale:1, origin: 'bottom'})
+
+sr.reveal(`.new_card:nth-child(1) img`, {rotate:  {z: -30}, distance: 0})
+sr.reveal(`.new_card:nth-child(2) img`, {rotate:  {z: 15}, distance: 0, delay: 600})
+sr.reveal(`.new_card:nth-child(3) img`, {rotate:  {z: -30}, distance: 0, delay: 900})
+
+sr.reveal(`favorite_card img`, {interval:100, rotate:  {z: -30}, distance: 0, delay: 900})
+
+sr.reveal(`.footer_container`, {scale: 1})
