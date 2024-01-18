@@ -1,3 +1,11 @@
+// Loading page
+let loading = document.getElementById("loading");
+
+window.onload = ()=> {
+    loading.style.display = "none";
+}
+
+
 // Add blur in header //
 const blurHeader = ()=> {
     let header = document.getElementById("header");
